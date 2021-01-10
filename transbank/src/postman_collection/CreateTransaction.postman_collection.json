@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "90b79283-a8de-4234-8159-118de3ddde6e",
+		"name": "CreateTransaction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"buyOrder\": \"ordenCompra12345678\",\r\n  \"sessionId\": \"sesion1234564\",\r\n  \"amount\": 10000,\r\n  \"cvv\": 123,\r\n  \"cardNumber\": \"4051885600446623\",\r\n  \"cardExpirationDate\": \"22/10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QueryInstallments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"token\": \"01ab305d6def549ea3f18ee82101dff3c2bc3252d7d234f1dd40c39076996090\",\r\n  \"cuotas\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/query-installments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"query-installments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CommitTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"token\": \"01ab305d6def549ea3f18ee82101dff3c2bc3252d7d234f1dd40c39076996090\",\r\n  \"idQueryInstallments\": 31324436\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/commit",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"commit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StatusTransactionQuery",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"01ab305d6def549ea3f18ee82101dff3c2bc3252d7d234f1dd40c39076996090\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/status-transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"status-transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReserveOrCancelTransaction",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"01ab305d6def549ea3f18ee82101dff3c2bc3252d7d234f1dd40c39076996090\",\r\n    \"amount\": 10000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/reserve-or-cancel",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reserve-or-cancel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
