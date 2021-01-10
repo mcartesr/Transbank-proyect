@@ -46,5 +46,6 @@ class TransbankServiceTest {
 				
 		assertThat(transbankService.responseCreateTransaction(createT)).isNotNull();
 		assertThat(transbankService.responseCreateTransaction(createT)).isInstanceOf(ResponseUI.class);
+		
 	}
 }
