@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import com.transbank.transbank.model.*;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -50,6 +49,7 @@ public class TransbankService {
 		return responseUI;
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Transactional
 	public ResponseUI queryInstallments(String token, Byte cuotas) {
 		ResponseUI responseUI = null;

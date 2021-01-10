@@ -9,15 +9,8 @@ public class CreateTransaction {
 	private String cardExpirationDate;
 	private Short cvv;
 	
-	public CreateTransaction(String buyOrder, String sessionId, Double amount, String cardNumber,
-			String cardExpirationDate, Short cvv) {
+	public CreateTransaction() {
 		super();
-		this.buyOrder = buyOrder;
-		this.sessionId = sessionId;
-		this.amount = amount;
-		this.cardNumber = cardNumber;
-		this.cardExpirationDate = cardExpirationDate;
-		this.cvv = cvv;
 	}
 	
 	public String getBuyOrder() {

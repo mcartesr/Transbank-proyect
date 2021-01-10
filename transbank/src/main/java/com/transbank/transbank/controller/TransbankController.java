@@ -20,8 +20,8 @@ public class TransbankController {
 	TransbankService transbank;
 	
 	@GetMapping("/test")
-	public String holaMundo() {
-		return "SI ESTA CONECTADO";
+	public String test() {
+		return "SI ESTA CONECTADO PARA HACER PETICIÓN HTTP";
 	}
 	
 	
